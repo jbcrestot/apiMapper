@@ -1,0 +1,37 @@
+{
+    "name": "symfony/navitiaphp",
+    "type": "symfony-bundle",
+    "description": "Component",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Symfony Community",
+            "homepage": "https://symfony.com/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "guzzlehttp/guzzle": "~6.0",
+        "symfony/options-resolver": "~3.1"
+    },
+    "require-dev": {
+        "symfony/process": "~2.8|~3.0",
+        "symfony/css-selector": "~2.8|~3.0"
+    },
+    "suggest": {
+        "symfony/process": ""
+    },
+    "autoload": {
+      "psr-4" : {
+        "Canaltp\\NavitiaPhp\\" : "",
+        "Canaltp\\NavitiaPhpBundle\\" : ""
+      }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.1-dev"
+        }
+    }
+}

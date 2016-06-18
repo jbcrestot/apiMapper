@@ -1,0 +1,14 @@
+services:
+    navitia:
+        class: GuzzleHttp\Client
+        arguments:
+            -
+                'base_uri': 'https://api.navitia.io/v1/coverage/fr-idf/'
+                'http_errors': true',
+                'timeout': 2.0
+                'headers':
+                    'Authorization': 'Basic ODEwZjAwNDMtMDU1Zi00Y2VkLWE0OWQtNzAxZTNlYmQzNmQyOg=='
+
+    navitia_coverage:
+        class: Canaltp\NavitiaPhp\Api\Coverage
+        arguments: ["@snavitia"]
