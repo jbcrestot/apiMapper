@@ -1,6 +1,6 @@
 <?php
 
-namespace Canaltp\NavitiaPhp;
+namespace CanalTP\NavitiaPhp;
 
 use Canaltp\NavitiaPhp\Exception\NavitiaException;
 use GuzzleHttp\Client;

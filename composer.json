@@ -16,10 +16,12 @@
             "Tests\\": "tests/"
         }
     },
-    "repositories": {
-        "type": "git",
-        "url": "https://github.com/jbcrestot/NavitiaPhpBundle.git"
-    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/jbcrestot/NavitiaPhpBundle.git"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "symfony/symfony": "3.1.*",
@@ -33,7 +35,8 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
         "guzzlehttp/guzzle": "~6.0",
-        "canaltp/navitiaphp-bundle": "dev-master"
+        "canaltp/navitiaphp-bundle": "~1.0",
+        "symfony/assetic-bundle": "^2.8"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

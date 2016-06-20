@@ -1,3 +1,0 @@
-canal_tp_navitia_php_homepage:
-    path:     /
-    defaults: { _controller: CanalTPNavitiaPhpBundle:Default:index }

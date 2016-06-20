@@ -1,8 +1,8 @@
 <?php
 
-namespace Canaltp\NavitiaPhp\Api;
+namespace CanalTP\NavitiaPhp\Api;
 
-use Canaltp\NavitiaPhp\Navitia;
+use CanalTP\NavitiaPhp\Navitia;
 
 class Coverage {
 

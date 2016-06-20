@@ -1,6 +1,6 @@
 <?php
 
-namespace Canaltp\NavitiaPhp\Exception;
+namespace CanalTP\NavitiaPhp\Exception;
 
 class NavitiaException extends \Exception
 {
