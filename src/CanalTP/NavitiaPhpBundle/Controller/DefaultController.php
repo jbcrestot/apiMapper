@@ -1,6 +1,6 @@
 <?php
 
-namespace Canaltp\NavitiaPhpBundle\Controller;
+namespace CanalTP\NavitiaPhpBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('CanaltpNavitiaPhpBundle:Default:index.html.twig');
+        return $this->render('CanalTPNavitiaPhpBundle:Default:index.html.twig');
     }
 }

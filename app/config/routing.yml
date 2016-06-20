@@ -1,3 +1,7 @@
+canal_tp_navitia_php:
+    resource: "@CanalTPNavitiaPhpBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Resources/config/routing.yml"
     prefix:   /

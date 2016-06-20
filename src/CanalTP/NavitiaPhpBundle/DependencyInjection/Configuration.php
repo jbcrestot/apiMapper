@@ -1,6 +1,6 @@
 <?php
 
-namespace Canaltp\NavitiaPhpBundle\DependencyInjection;
+namespace CanalTP\NavitiaPhpBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('canaltp_navitia_php');
+        $rootNode = $treeBuilder->root('canal_tp_navitia_php');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for

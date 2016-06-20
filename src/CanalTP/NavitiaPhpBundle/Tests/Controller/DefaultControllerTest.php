@@ -1,6 +1,6 @@
 <?php
 
-namespace Canaltp\NavitiaPhpBundle\Tests\Controller;
+namespace CanalTP\NavitiaPhpBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
