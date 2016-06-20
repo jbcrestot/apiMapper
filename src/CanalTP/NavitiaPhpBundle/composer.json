@@ -10,6 +10,10 @@
             "homepage": "https://symfony.com/contributors"
         }
     ],
+    "repositories": {
+        "type": "git",
+        "url": "https://github.com/jbcrestot/NavitiaPhpBundle.git"
+    },
     "require": {
         "php": ">=5.5.9",
         "guzzlehttp/guzzle": "~6.0",
