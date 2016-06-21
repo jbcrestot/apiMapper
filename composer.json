@@ -20,6 +20,10 @@
         {
             "type": "git",
             "url": "https://github.com/jbcrestot/NavitiaPhpBundle.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/jbcrestot/NavitiaPhp.git"
         }
     ],
     "require": {
@@ -35,6 +39,7 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
         "guzzlehttp/guzzle": "~6.0",
+        "canaltp/navitia-bundle": "~1.0",
         "canaltp/navitiaphp-bundle": "~1.0",
         "symfony/assetic-bundle": "^2.8"
     },
