@@ -4,9 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "124f807a33655ac8dd9f4ef84d93612b",
-    "content-hash": "dcce5a127683a8c5e4b022401092d7cb",
+    "hash": "5b8d02d549964bf0d9172e1692fef32b",
+    "content-hash": "fc5f6b004a84d40ba4535e9962cd005b",
     "packages": [
+        {
+            "name": "canaltp/navitiaphp",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jbcrestot/NavitiaPhp.git",
+                "reference": "a8462d4e154242deeea8b84cab841471b7659656"
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.5.9",
+                "symfony/options-resolver": "~3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CanalTP\\NavitiaPhp\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Component",
+            "time": "2016-06-21 06:46:08"
+        },
         {
             "name": "canaltp/navitiaphp-bundle",
             "version": "1.1",
