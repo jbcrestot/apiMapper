@@ -9,12 +9,11 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        new Coverage('tt');
-        die('ici');
 
-        $coverages = $this->get('navitia_coverage')->all();
+
+        $coverages = $this->get('navitia_coverage')->get();
         dump($coverages);
 
-        return $this->render('AppBundle:Default:index.html.twig');
+        return $this->render('AppBundle::index.html.twig');
     }
 }
