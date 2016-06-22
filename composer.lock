@@ -4,16 +4,16 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b8d02d549964bf0d9172e1692fef32b",
-    "content-hash": "fc5f6b004a84d40ba4535e9962cd005b",
+    "hash": "7dc3d596b0861ce032b26675520a647b",
+    "content-hash": "4379418745fcabe37f528e2e8e5df11c",
     "packages": [
         {
             "name": "canaltp/navitiaphp",
-            "version": "1.0",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbcrestot/NavitiaPhp.git",
-                "reference": "a8462d4e154242deeea8b84cab841471b7659656"
+                "reference": "1d4558183dd78fde11c8ddad5446b942c317b0bb"
             },
             "require": {
                 "guzzlehttp/guzzle": "~6.0",
@@ -36,15 +36,15 @@
                 }
             ],
             "description": "Component",
-            "time": "2016-06-21 06:46:08"
+            "time": "2016-06-22 07:30:42"
         },
         {
             "name": "canaltp/navitiaphp-bundle",
-            "version": "1.1",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbcrestot/NavitiaPhpBundle.git",
-                "reference": "8f7fa4c63722341561d74cd8ac4f7d9da7623e41"
+                "reference": "4882b880f26fcc4781216d59ab1eb269bc95d92d"
             },
             "require": {
                 "guzzlehttp/guzzle": "~6.0",
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "Component",
-            "time": "2016-06-20 20:18:49"
+            "time": "2016-06-22 07:31:38"
         },
         {
             "name": "doctrine/annotations",

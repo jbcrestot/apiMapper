@@ -40,7 +40,7 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "symfony/assetic-bundle": "^2.8",
         "guzzlehttp/guzzle": "~6.0",
-        "canaltp/navitiaphp": "~1.0",
+        "canaltp/navitiaphp": "~1.2",
         "canaltp/navitiaphp-bundle": "~1.0"
     },
     "require-dev": {
