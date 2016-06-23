@@ -4,71 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b8d02d549964bf0d9172e1692fef32b",
-    "content-hash": "fc5f6b004a84d40ba4535e9962cd005b",
+    "hash": "ff78a6b6507f6e21796ffb84aaca2d7a",
+    "content-hash": "ad42ef25dc445fb342a45f9891355416",
     "packages": [
-        {
-            "name": "canaltp/navitiaphp",
-            "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jbcrestot/NavitiaPhp.git",
-                "reference": "a8462d4e154242deeea8b84cab841471b7659656"
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~6.0",
-                "php": ">=5.5.9",
-                "symfony/options-resolver": "~3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "CanalTP\\NavitiaPhp\\": ""
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Component",
-            "time": "2016-06-21 06:46:08"
-        },
-        {
-            "name": "canaltp/navitiaphp-bundle",
-            "version": "1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jbcrestot/NavitiaPhpBundle.git",
-                "reference": "8f7fa4c63722341561d74cd8ac4f7d9da7623e41"
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~6.0",
-                "php": ">=5.5.9",
-                "symfony/options-resolver": "~3.1"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-4": {
-                    "CanalTP\\NavitiaPhpBundle\\": ""
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Component",
-            "time": "2016-06-20 20:18:49"
-        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
