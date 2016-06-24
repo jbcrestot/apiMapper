@@ -9,11 +9,9 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+        $dump = $this->get('navitia')->get('coverage')->getInformations();
 
 
-        $coverages = $this->get('navitia_coverage')->get();
-        dump($coverages);
-
-        return $this->render('AppBundle::index.html.twig');
+        return $this->render('AppBundle::index.html.twig', array('dump' => $dump));
     }
 }

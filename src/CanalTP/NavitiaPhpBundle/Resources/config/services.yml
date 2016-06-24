@@ -1,5 +1,5 @@
 services:
-    guzzle:
+    http_client:
         class: GuzzleHttp\Client
         arguments:
             -
@@ -11,8 +11,4 @@ services:
 
     navitia:
         class: CanalTP\NavitiaPhp\Navitia
-        arguments: ["@guzzle", "fr-idf"]
-
-    navitia_coverage:
-        class: CanalTP\NavitiaPhp\Api\Coverage
-        arguments: ["@navitia"]
+        arguments: ["@http_client", "fr-idf", true]
