@@ -9,7 +9,8 @@ class Coords {
     private $navitia;
 
     /**
-     * Coverage constructor.
+     * Coords constructor.
+     * @param Navitia $navitia
      */
     public function __construct(Navitia $navitia)
     {
@@ -23,6 +24,25 @@ class Coords {
      */
     public function getInformations($coords)
     {
-        return $this->navitia->call(array('path' => array('coords' => $coords)));
+        return $this->navitia->call(array('path' => array(
+            0 => array(
+                'element' => 'coords',
+                'value'   => $coords
+            )
+        )));
+    }
+
+    public function getClosePois($coords, array $query)
+    {
+        return $this->navitia->call(array(
+            'path' => array(
+                0 => array(
+                    'element' => 'coords',
+                    'value'   => $coords
+                )
+            ),
+            'query' => $query
+
+        ));
     }
 }

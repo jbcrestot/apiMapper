@@ -108,8 +108,6 @@ class Navitia
         ));
 
         $options = $resolver->resolve($options);
-
-        dump($options);
     }
 
     private function buildUrl($options)
@@ -118,13 +116,18 @@ class Navitia
 
         if (!empty($options['path'])) {
             foreach ($options['path'] as $item) {
-                $url += $item['element'] .'/'. $item['value']. '/';
+                $url .= $item['element'] .'/'. $item['value']. '/';
             }
         }
 
         if (!empty($options['parameters'])) {
-            foreach ($options['parameters'] as $item) {
-                $url += $item['element'] .'/'. $item['value'];
+            $url .= '?';
+            foreach ($options['parameters'] as $key => $item) {
+                if (0 !== $key) {
+                    $url .= '&';
+                }
+
+                $url .= $item['element'] .'='. $item['value'];
             }
         }
 
