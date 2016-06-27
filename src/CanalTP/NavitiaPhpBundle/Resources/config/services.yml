@@ -1,0 +1,14 @@
+services:
+    http_client:
+        class: GuzzleHttp\Client
+        arguments:
+            -
+                'base_uri': 'https://api.navitia.io/v1/'
+                'http_errors': true',
+                'timeout': 2.0
+                'headers':
+                    'Authorization': 'Basic ODEwZjAwNDMtMDU1Zi00Y2VkLWE0OWQtNzAxZTNlYmQzNmQyOg=='
+
+    navitia:
+        class: CanalTP\NavitiaPhp\Navitia
+        arguments: ["@http_client", "fr-idf", true]

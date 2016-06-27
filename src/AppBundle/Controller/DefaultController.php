@@ -10,15 +10,13 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-        dump($this->get('navitia.coverage')->all());
-        dump($this->get('navitia.coverage')->get());
+        $dump = $this->get('navitia')->get('coverage')->getInformations();
 
         dump($this->get('navitia.coverage')->findByCoords('2.37705;48.84675'));
 
         dump($this->get('navitia.traffic_reports')->forCoverage());
 //        die;
 
-
-        return $this->render('AppBundle::index.html.twig');
+        return $this->render('AppBundle::index.html.twig', array('dump' => $dump));
     }
 }
