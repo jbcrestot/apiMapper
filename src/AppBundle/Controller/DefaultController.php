@@ -10,26 +10,43 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-//        dump($this->get('navitia')->get('traffic_reports')->forCoverage());
-
-        return $this->render('AppBundle::index.html.twig', array('dump' => $dump));
+//        return $this->render('AppBundle::index.html.twig', array('dump' => $dump));
     }
 
     public function coverageAction(Request $request)
     {
-        dump($this->get('navitia')->get('coverage')->getInformations());
+        $dump[] = $this->get('navitia')->get('coverage')->getInformations();
 
-        die;
+        return $this->renderIndex($dump);
     }
 
     public function coordsAction(Request $request)
     {
-        echo 'coords infos';
-        dump($this->get('navitia')->get('coords')->getInformations('2.37705;48.84675'));
+        $dump[] = $this->get('navitia')->get('coords')->getInformations('2.37705;48.84675');
 
-        echo 'close POIs';
-        dump($this->get('navitia')->get('coords')->getClosePois('2.37705;48.84675', array('distance' => 1000)));
+        $dump[] = $this->get('navitia')->get('coords')->getClosePois('2.37705;48.84675', array('distance' => 1000));
+        
+        return $this->renderIndex($dump);
+    }
 
-        die;
+    public function trafficReportsAction(Request $request)
+    {
+        $dump[] = $this->get('navitia')->get('traffic_reports')->forCoverage();
+        
+        return $this->renderIndex($dump);
+    }
+
+    public function linesAction(Request $request)
+    {
+        $dump[] = $this->get('navitia')->get('lines')->getAll();
+
+        $dump[] = $this->get('navitia')->get('lines')->getById('line:OIF:019248003:03OIF14');
+
+        return $this->renderIndex($dump);
+    }
+
+    private function renderIndex(array $dump)
+    {
+        return $this->render('AppBundle::index.html.twig', array('dump' => $dump));
     }
 }

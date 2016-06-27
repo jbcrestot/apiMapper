@@ -1,3 +1,12 @@
-app:
-    resource: "@AppBundle/Resources/config/routing.yml"
-    prefix:   /
+coords:
+    path:      /coords
+    defaults:  { _controller: AppBundle:Default:coords }
+coverage:
+    path:      /coverage
+    defaults:  { _controller: AppBundle:Default:coverage }
+traffic_reports:
+    path:      /traffic-reports
+    defaults:  { _controller: AppBundle:Default:trafficReports }
+lines:
+    path:      /lines
+    defaults:  { _controller: AppBundle:Default:lines }

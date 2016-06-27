@@ -3,6 +3,7 @@
 namespace CanalTP\NavitiaPhp;
 
 use CanalTP\NavitiaPhp\Api\Coords;
+use CanalTP\NavitiaPhp\Api\Lines;
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use GuzzleHttp\Client;
@@ -25,6 +26,7 @@ class Navitia
     private $coverage = null;
     private $trafficReports = null;
     private $coords = null;
+    private $lines = null;
 
     /**
      * Navitia constructor.
@@ -64,6 +66,13 @@ class Navitia
                 }
 
                 return $this->coords;
+
+            case 'lines':
+                if (is_null($this->lines)) {
+                    $this->lines = new Lines($this);
+                }
+
+                return $this->lines;
             default:
                 throw new NavitiaException('Can\'t find API : ' . $apiName, 500);
         }
@@ -97,14 +106,13 @@ class Navitia
         }
     }
 
-    public function configureOptions(&$options)
+    private function configureOptions(&$options)
     {
-        dump($options);
         $resolver = new OptionsResolver();
         $resolver->setDefaults(array(
             'coverage' => $this->defaultCoverage,
             'path'     => null,
-            'parameters' => null
+            'query' => null
         ));
 
         $options = $resolver->resolve($options);
@@ -116,18 +124,31 @@ class Navitia
 
         if (!empty($options['path'])) {
             foreach ($options['path'] as $item) {
-                $url .= $item['element'] .'/'. $item['value']. '/';
+                $url .= $item['element'];
+                if (!empty($item['value'])) {
+                     $url .= '/'. $item['value']. '/';
+                }
             }
         }
 
-        if (!empty($options['parameters'])) {
-            $url .= '?';
-            foreach ($options['parameters'] as $key => $item) {
-                if (0 !== $key) {
-                    $url .= '&';
+        if (!empty($options['query'])) {
+            $query = '?';
+            foreach ($options['query'] as $key => $value) {
+                // optionsResolver add null default value for all parameters
+                if (empty($value)) {
+                    continue;
                 }
 
-                $url .= $item['element'] .'='. $item['value'];
+                if (0 !== $key) {
+                    $query .= '&';
+                }
+
+                $query .= $key .'='. $value;
+            }
+
+            // we don't want to have useless ?
+            if (1 < strlen($query)) {
+                $url .= $query;
             }
         }
 

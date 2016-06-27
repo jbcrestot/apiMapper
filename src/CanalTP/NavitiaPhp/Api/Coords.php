@@ -2,21 +2,10 @@
 
 namespace CanalTP\NavitiaPhp\Api;
 
-use CanalTP\NavitiaPhp\Navitia;
+use CanalTP\NavitiaPhp\Api\Api;
 
-class Coords {
-
-    private $navitia;
-
-    /**
-     * Coords constructor.
-     * @param Navitia $navitia
-     */
-    public function __construct(Navitia $navitia)
-    {
-        $this->navitia = $navitia;
-    }
-
+class Coords extends Api
+{
     /**
      * @param $coords
      * @return mixed
@@ -39,6 +28,9 @@ class Coords {
                 0 => array(
                     'element' => 'coords',
                     'value'   => $coords
+                ),
+                1 => array(
+                    'element' => 'pois'
                 )
             ),
             'query' => $query

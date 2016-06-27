@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {{ dump(dump) }}
+    {% for d in dump %}
+        {{ dump(d) }}
+    {% endfor %}
 {% endblock body %}

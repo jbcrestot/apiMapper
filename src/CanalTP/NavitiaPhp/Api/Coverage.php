@@ -2,20 +2,10 @@
 
 namespace CanalTP\NavitiaPhp\Api;
 
-use CanalTP\NavitiaPhp\Navitia;
+use CanalTP\NavitiaPhp\Api\Api;
 
-class Coverage {
-
-    private $navitia;
-
-    /**
-     * Coverage constructor.
-     */
-    public function __construct(Navitia $navitia)
-    {
-        $this->navitia = $navitia;
-    }
-
+class Coverage extends Api
+{
     /**
      * return a list of the areas covered by navitia
      *
@@ -43,4 +33,9 @@ class Coverage {
 
         return $this->navitia->call(array('coverage' => $coverage));
     }
+
+    /**
+     * TODO: need to use coords as a filter
+     * @see http://doc.navitia.io/?shell#inverted-geocoding
+     */
 }
