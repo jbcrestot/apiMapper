@@ -32,7 +32,6 @@ class PublicTransportObject extends Api
         $queryResolver = new OptionsResolver();
         $queryResolver->setDefaults(array(
             'depth' => null,
-            'odt_level' => null, // only for lines
             'distance' => null, // only for coords?
             'headsign' => null,
             'since' => null,

@@ -36,11 +36,20 @@ class DefaultController extends Controller
         return $this->renderIndex($dump);
     }
 
+    public function networksAction(Request $request)
+    {
+        $dump[] = $this->get('navitia')->get('networks')->getAll();
+
+        return $this->renderIndex($dump);
+    }
+
     public function linesAction(Request $request)
     {
         $dump[] = $this->get('navitia')->get('lines')->getAll();
 
         $dump[] = $this->get('navitia')->get('lines')->getById('line:OIF:019248003:03OIF14');
+
+        $dump[] = $this->get('navitia')->get('lines')->getById('line:OIF:019248003:03OIF14', ['odt_level' => 'scheduled']);
 
         return $this->renderIndex($dump);
     }

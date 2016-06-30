@@ -10,3 +10,6 @@ traffic_reports:
 lines:
     path:      /lines
     defaults:  { _controller: AppBundle:Default:lines }
+
+    path:      /lines
+    defaults:  { _controller: AppBundle:Default:lines }

@@ -133,13 +133,14 @@ class Navitia
 
         if (!empty($options['query'])) {
             $query = '?';
+            $i = 0;
             foreach ($options['query'] as $key => $value) {
                 // optionsResolver add null default value for all parameters
                 if (empty($value)) {
                     continue;
                 }
 
-                if (0 !== $key) {
+                if (0 > $i) {
                     $query .= '&';
                 }
 
@@ -150,6 +151,8 @@ class Navitia
             if (1 < strlen($query)) {
                 $url .= $query;
             }
+
+            $i++;
         }
 
         if ($this->debug) {
